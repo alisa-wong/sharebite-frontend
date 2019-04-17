@@ -1,0 +1,32 @@
+.selected {
+    background-color: orange;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.box {
+    border: solid black 1px;
+    padding: 30px;
+    width: 300px;
+}
+
+.box h2 {
+    margin-top: 0px;
+}
+
+.form {
+    background-color: grey;
+    margin-bottom: 40px;
+    position: absolute;
+    top: 50px;
+    left: 300px;
+    width: 400px;
+    height: 400px;
+}
+
+.hidden {
+    display: none;
+}
