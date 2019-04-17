@@ -43,13 +43,16 @@ if(isset($_POST['upload_item'])) {
 </header>
 <body>
 <div class='body'>
-    <h1><a href='index.php'>Menu</a></h1>
+    <div class='title'>
+        <h1><a href='index.php'>Restaurant Menu</a></h1>
+    </div>
 
     <div id='menu'>
         <div class='section_box box'>
-            <h2>Menu Sections</h2>
-
-            <button class='section_button1'>+</button>
+            <div class='top'>
+                <h2>Menu Sections</h2>
+                <p class='add section_button1'>+</p>
+            </div>
 
             <div class='form hidden section_form'>
                 <form id='upload_section' action='index.php' method='post' enctype='multipart/form-data'>
@@ -85,11 +88,14 @@ if(isset($_POST['upload_item'])) {
 
         <div class='items_box box'>
 
-            <h2>Section Items</h2>
-
             <?php
                 if (isset($_GET['section_id'])) {
-                    echo '<button class="section_button2">+</button>';
+                    ?>
+                    <div class='top'>
+                        <h2>Section Items</h2>
+                        <p class='add section_button2'>+</p>
+                    </div>
+                    <?php
 
                     $path = 'index.php?' . http_build_query( array('section_id' => $_GET['section_id']) ); 
             ?>
@@ -104,7 +110,7 @@ if(isset($_POST['upload_item'])) {
                     </form>
                     <button class='close2'>Close</button>
                 </div>
-            <?php } ?>
+            <?php } else { echo '<div class="top"><h2>Section Items</h2></div>'; }?>
 
             <?php
             if (isset($_GET['section_id'])) {
