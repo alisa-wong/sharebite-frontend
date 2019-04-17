@@ -55,6 +55,7 @@ if(isset($_POST['upload_item'])) {
             </div>
 
             <div class='form hidden section_form'>
+                <p class='close1'>Close</p>
                 <form id='upload_section' action='index.php' method='post' enctype='multipart/form-data'>
                     <h3>Add a New Section</h3>
 
@@ -63,7 +64,6 @@ if(isset($_POST['upload_item'])) {
 
                     <button name='upload_section' type='submit'>Submit</button>
                 </form>
-                <button class='close1'>Close</button>
             </div>
 
             <?php
@@ -100,6 +100,7 @@ if(isset($_POST['upload_item'])) {
                     $path = 'index.php?' . http_build_query( array('section_id' => $_GET['section_id']) ); 
             ?>
                 <div class='form hidden items_form'>
+                    <p class='close2'>Close</p>
                     <form id='upload_item' action=<?php echo $path; ?> method='post' enctype='multipart/form-data'>
                         <h3>Add a New Item</h3>
 
@@ -108,7 +109,6 @@ if(isset($_POST['upload_item'])) {
 
                         <button name='upload_item' type='submit'>Submit</button>
                     </form>
-                    <button class='close2'>Close</button>
                 </div>
             <?php } else { echo '<div class="top"><h2>Section Items</h2></div>'; }?>
 

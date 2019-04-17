@@ -52,14 +52,19 @@ a {
     margin: 0px;
 }
 
+.close1, .close2 {
+    margin-left: 350px;
+}
+
 .form {
-    background-color: grey;
+    background-color: lightgrey;
     margin-bottom: 40px;
     position: absolute;
     top: 50px;
     left: 300px;
     width: 400px;
     height: 400px;
+    padding: 0px 30px;
 }
 
 .section, .item {
