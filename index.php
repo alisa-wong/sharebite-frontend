@@ -91,7 +91,7 @@ if(isset($_POST['upload_item'])) {
                 if (isset($_GET['section_id'])) {
                     echo '<button class="section_button2">+</button>';
 
-                    $path = 'index.php?' . http_build_query( array('section_id' => $section['id']) ); 
+                    $path = 'index.php?' . http_build_query( array('section_id' => $_GET['section_id']) ); 
             ?>
                 <div class='form hidden items_form'>
                     <form id='upload_item' action=<?php echo $path; ?> method='post' enctype='multipart/form-data'>
